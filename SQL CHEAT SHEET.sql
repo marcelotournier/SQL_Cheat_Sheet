@@ -1,4 +1,10 @@
 -- SQL Cookbook Codes
+
+/* This code was built to learn the basics of SQL queries in databases.
+   To train the codes, please enter the films database in DataCamp Intro to SQL Course:
+   https://www.datacamp.com/courses/intro-to-sql-for-data-science
+  */
+
 -- SQL Basics:
 
 
@@ -197,8 +203,10 @@ WHERE language IN ('German','Spanish','French');
 -- Find multiple conditionals: 
 SELECT title, country,release_year
 FROM films
-WHERE (country = 'USA' OR country = 'UK') AND (release_year > 2001 OR release_year < 1979) --one option 
---WHERE country IN ('USA','UK') AND release_year NOT BETWEEN 1979 AND 2001 --other option
+WHERE (country = 'USA' OR country = 'UK') 
+AND (release_year > 2001 OR release_year < 1979) --one option 
+--WHERE country IN ('USA','UK') 
+AND release_year NOT BETWEEN 1979 AND 2001 --other option
 ;
 
 -- Good queries for recommendation algorithm:
