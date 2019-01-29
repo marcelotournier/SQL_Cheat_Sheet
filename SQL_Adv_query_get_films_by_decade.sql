@@ -53,9 +53,11 @@ UNION ALL
 SELECT '1940s' AS decade
 ;
 
--- COOL! it joins all SELECT queries into one row!  Let's test on two rows of our original decade query:
+/* COOL! it joins all SELECT queries into rows in the same column!  
+   Let's test on two rows of our original decade query: 
+*/
 
---same code of line 11:
+--same code of line 19:
 SELECT '1920s' AS decade,
 (SELECT DISTINCT COUNT(*) 
 FROM films 
@@ -63,7 +65,7 @@ WHERE release_year IS NOT NULL AND release_year > '1920' AND release_year <= '19
 
 UNION ALL
 
---code of decade of 1930s:
+-- same code as above, edited to query movies from the 1930s:
 SELECT '1930s' AS decade,
 (SELECT DISTINCT COUNT(*)
 FROM films
