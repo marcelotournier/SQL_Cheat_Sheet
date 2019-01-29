@@ -22,8 +22,8 @@ FROM films
 WHERE release_year IS NOT NULL AND release_year > '1920' AND release_year <= '1930') AS number_of_films;
 
 /* good!  We are on our way...  BUT - if we create all subqueries separated by a comma,
-we would get an error, because of the same names on the column aliases ("decade" and "number_of_films"),
-because SQL doesn't understand that you want to get the query result as rows and two columns...
+we would get an error, because of the same names on the column aliases ("decade" and "number_of_films").
+SQL doesn't understand that you want to get the query result as rows and two columns...
 
 So, you can remove the aliases.  
 
