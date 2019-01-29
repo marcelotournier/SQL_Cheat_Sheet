@@ -54,7 +54,7 @@ SELECT '1940s' AS decade
 ;
 
 /* COOL! it joins all SELECT queries into rows in the same column!  
-   Let's test on two rows of our original decade query: 
+   Let's test on three rows of our original decade query: 
 */
 
 --same code of line 19:
